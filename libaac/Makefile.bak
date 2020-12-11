@@ -1,0 +1,14 @@
+#PROTOCOL_COMMON_DIR=$(USERNAMEDIR)/$(HARDWARE_MODEL)/code/protocol/common
+#SDK_INCLUDE_DIR=$(USERNAMEDIR)/$(HARDWARE_MODEL)/code/product
+#THIRD_PLAT_LIB_PROJECT_DIR=$(PROTOCOL_COMMON_DIR)/thirdplatlib
+
+#CPPFLAGS= -I$(SDK_INCLUDE_DIR)/mdr_include \
+#		-I$(SDK_INCLUDE_DIR)/sdk_include \
+#		-I$(USERNAMEDIR)/$(HARDWARE_MODEL)/common/include/stlport \
+#		-I../include \
+#		-I. -D_DEBUG
+
+#LIB_NAME=libfaac
+
+#include $(RULES_MAKE)
+

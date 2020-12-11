@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{91755A95-1E0C-4B8F-A016-61BC7A17B30B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>librtmp</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\..\Lib\debug\lib_win\</OutDir>
+    <IntDir>$(ProjectName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_NO_CRT_STDIO_INLINE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\Include;..\..\..\Include\librtmp;..\..\..\Include\openssl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\amf.c" />
+    <ClCompile Include="..\hashswf.c" />
+    <ClCompile Include="..\log.c" />
+    <ClCompile Include="..\parseurl.c" />
+    <ClCompile Include="..\rtmp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Include\librtmp\amf.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\crc32.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\deflate.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\faac.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\gzguts.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\inffast.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\inffixed.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\inflate.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\inftrees.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\rtmp.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\trees.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\zconf.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\zlib.h" />
+    <ClInclude Include="..\..\..\Include\librtmp\zutil.h" />
+    <ClInclude Include="..\..\..\Include\openssl\aes.h" />
+    <ClInclude Include="..\..\..\Include\openssl\asn1.h" />
+    <ClInclude Include="..\..\..\Include\openssl\asn1t.h" />
+    <ClInclude Include="..\..\..\Include\openssl\asn1_mac.h" />
+    <ClInclude Include="..\..\..\Include\openssl\bio.h" />
+    <ClInclude Include="..\..\..\Include\openssl\blowfish.h" />
+    <ClInclude Include="..\..\..\Include\openssl\bn.h" />
+    <ClInclude Include="..\..\..\Include\openssl\buffer.h" />
+    <ClInclude Include="..\..\..\Include\openssl\camellia.h" />
+    <ClInclude Include="..\..\..\Include\openssl\cast.h" />
+    <ClInclude Include="..\..\..\Include\openssl\cmac.h" />
+    <ClInclude Include="..\..\..\Include\openssl\cms.h" />
+    <ClInclude Include="..\..\..\Include\openssl\comp.h" />
+    <ClInclude Include="..\..\..\Include\openssl\conf.h" />
+    <ClInclude Include="..\..\..\Include\openssl\conf_api.h" />
+    <ClInclude Include="..\..\..\Include\openssl\crypto.h" />
+    <ClInclude Include="..\..\..\Include\openssl\des.h" />
+    <ClInclude Include="..\..\..\Include\openssl\des_old.h" />
+    <ClInclude Include="..\..\..\Include\openssl\dh.h" />
+    <ClInclude Include="..\..\..\Include\openssl\dsa.h" />
+    <ClInclude Include="..\..\..\Include\openssl\dso.h" />
+    <ClInclude Include="..\..\..\Include\openssl\dtls1.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ebcdic.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ec.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ecdh.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ecdsa.h" />
+    <ClInclude Include="..\..\..\Include\openssl\engine.h" />
+    <ClInclude Include="..\..\..\Include\openssl\err.h" />
+    <ClInclude Include="..\..\..\Include\openssl\evp.h" />
+    <ClInclude Include="..\..\..\Include\openssl\e_os2.h" />
+    <ClInclude Include="..\..\..\Include\openssl\hmac.h" />
+    <ClInclude Include="..\..\..\Include\openssl\idea.h" />
+    <ClInclude Include="..\..\..\Include\openssl\krb5_asn.h" />
+    <ClInclude Include="..\..\..\Include\openssl\kssl.h" />
+    <ClInclude Include="..\..\..\Include\openssl\lhash.h" />
+    <ClInclude Include="..\..\..\Include\openssl\md4.h" />
+    <ClInclude Include="..\..\..\Include\openssl\md5.h" />
+    <ClInclude Include="..\..\..\Include\openssl\mdc2.h" />
+    <ClInclude Include="..\..\..\Include\openssl\modes.h" />
+    <ClInclude Include="..\..\..\Include\openssl\objects.h" />
+    <ClInclude Include="..\..\..\Include\openssl\obj_mac.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ocsp.h" />
+    <ClInclude Include="..\..\..\Include\openssl\opensslconf.h" />
+    <ClInclude Include="..\..\..\Include\openssl\opensslv.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ossl_typ.h" />
+    <ClInclude Include="..\..\..\Include\openssl\pem.h" />
+    <ClInclude Include="..\..\..\Include\openssl\pem2.h" />
+    <ClInclude Include="..\..\..\Include\openssl\pkcs12.h" />
+    <ClInclude Include="..\..\..\Include\openssl\pkcs7.h" />
+    <ClInclude Include="..\..\..\Include\openssl\pqueue.h" />
+    <ClInclude Include="..\..\..\Include\openssl\rand.h" />
+    <ClInclude Include="..\..\..\Include\openssl\rc2.h" />
+    <ClInclude Include="..\..\..\Include\openssl\rc4.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ripemd.h" />
+    <ClInclude Include="..\..\..\Include\openssl\rsa.h" />
+    <ClInclude Include="..\..\..\Include\openssl\safestack.h" />
+    <ClInclude Include="..\..\..\Include\openssl\seed.h" />
+    <ClInclude Include="..\..\..\Include\openssl\sha.h" />
+    <ClInclude Include="..\..\..\Include\openssl\srp.h" />
+    <ClInclude Include="..\..\..\Include\openssl\srtp.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ssl.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ssl2.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ssl23.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ssl3.h" />
+    <ClInclude Include="..\..\..\Include\openssl\stack.h" />
+    <ClInclude Include="..\..\..\Include\openssl\symhacks.h" />
+    <ClInclude Include="..\..\..\Include\openssl\tls1.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ts.h" />
+    <ClInclude Include="..\..\..\Include\openssl\txt_db.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ui.h" />
+    <ClInclude Include="..\..\..\Include\openssl\ui_compat.h" />
+    <ClInclude Include="..\..\..\Include\openssl\whrlpool.h" />
+    <ClInclude Include="..\..\..\Include\openssl\x509.h" />
+    <ClInclude Include="..\..\..\Include\openssl\x509v3.h" />
+    <ClInclude Include="..\..\..\Include\openssl\x509_vfy.h" />
+    <ClInclude Include="..\amf.h" />
+    <ClInclude Include="..\bytes.h" />
+    <ClInclude Include="..\dh.h" />
+    <ClInclude Include="..\dhgroups.h" />
+    <ClInclude Include="..\handshake.h" />
+    <ClInclude Include="..\http.h" />
+    <ClInclude Include="..\log.h" />
+    <ClInclude Include="..\rtmp.h" />
+    <ClInclude Include="..\rtmp_sys.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
